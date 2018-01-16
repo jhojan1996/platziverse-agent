@@ -1,19 +1,19 @@
-'use strict'
+'use strict';
 
-function parsePayload (payload) {
+function parsePayload(payload) {
   if (payload instanceof Buffer) {
-    payload = payload.toString('utf8')
+    payload = payload.toString('utf8');
   }
 
   try {
-    payload = JSON.parse(payload)
+    payload = JSON.parse(payload);
   } catch (e) {
-    payload = null
+    payload = null;
   }
 
-  return payload
+  return payload;
 }
 
 module.exports = {
-  parsePayload
-}
+  parsePayload: parsePayload
+};
